@@ -1,0 +1,45 @@
+* {
+    /* se eliminan todos los margin por defecto */
+    margin: 0;
+    /* se eliminan todos los padding por defecto */
+    padding: 0; 
+    /* se elimina el estilo de las listas */
+    list-style-type: none;
+    /* el padding y border se consideran para calcular
+     el tamaño de la caja */
+    box-sizing: border-box;
+    /* se elimina el subrayado de los links <a> */
+    text-decoration: none
+  }
+body{
+    background-color: black;
+}  
+header {
+    background-color: rgb(94, 10, 10);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+article {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: blanchedalmond;
+    }
+    article {
+        margin: 10px;
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        /*grid-template-rows: repeat(3, 1fr);*/
+        gap: 10px;
+    }
+}
